@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+
+<script>
+
+function time() {
+    var today = new Date();
+    document.write(today+"<br>")
+}
+time();
+
+function greetUser() {
+    var firstName = prompt("What is your First Name?");
+    var lastName = prompt("What is Your Last Name?");
+    var fullName = firstName + " " + lastName;
+    document.write("Hello, " + fullName + "! Welcome!"+"<br>");
+}
+greetUser();
+
+function addNumbers() {
+    var firstNumber = prompt("Enter the first number:");
+    var secondNumber = prompt("Enter the second number:");
+    var sum = firstNumber + secondNumber;
+    return sum;
+}
+
+var result = addNumbers();
+alert("The sum of the two numbers is: " + result);
+
+
+document.write("<br>")
+
+function squareNumber(num) {
+    return num * num;
+}
+
+
+var number = 5;
+var squaredNumber = squareNumber(number);
+document.write("The square of", number, "is", squaredNumber);
+document.write("<br>")
+
+
+function countNumbers(start, end) {
+    if (start <= end) {
+        for (var i = start; i <= end; i++) {
+            document.write(i + "<br>");
+        }
+    } else {
+        for (var j = start; j >= end; j--) {
+            document.write(j + "<br>");
+        }
+    }
+}
+
+
+var startNumber = 1;
+var endNumber = 30;
+countNumbers(startNumber, endNumber);
+
+document.write("<br>");
+function capitalizeWords(str) {
+    return str.replace(/\b\w/g, function(char) {
+        return char.toUpperCase();
+    });
+}
+
+
+var inputString = 'the quick brown fox';
+var capitalizedString = capitalizeWords(inputString);
+document.write("Original String:", inputString+"<br>");
+
+document.write("Capitalized String:", capitalizedString);
+document.write("<br>");
+function findLongestWord(str) {
+    var words = str.split(' ');
+    var longestWord = '';
+
+    for (var i = 0; i < words.length; i++) {
+        if (words[i].length > longestWord.length) {
+            longestWord = words[i];
+        }
+    }
+
+    return longestWord;
+}
+
+
+var inputString = 'Web Development Tutorial';
+var longest = findLongestWord(inputString);
+document.write("Longest word in the string:", longest);
+document.write("<br>");
+
+
+function countOccurrences(str, letter) {
+    var count = 0;
+
+    for (var i = 0; i < str.length; i++) {
+        if (str.charAt(i) === letter) {
+            count++;
+        }
+    }
+
+    return count;
+}
+
+var sampleString = "hello world hello";
+var specifiedLetter = 'o';
+var occurrences = countOccurrences(sampleString, specifiedLetter);
+document.write("Number of occurrences of '" + specifiedLetter + "' in the string:", occurrences);
+document.write("<br>");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
